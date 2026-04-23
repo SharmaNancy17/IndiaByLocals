@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreByPeople - India Travel Guide with Real Reviews</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-users"></i> ExploreByPeople</h1>
+            <p class="tagline">Discover India Through Real Traveler Experiences, Weather & Local Insights</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <h2>Search Location</h2>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search for cities, states in India..." autocomplete="off">
+                    <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="resultsSection" class="results-section" style="display: none;">
+            <div class="location-header">
+                <h2 id="locationName"></h2>
+                <p id="locationDetails"></p>
+            </div>
+
+            <!-- AI Summary Card -->
+            <div class="card ai-summary-card">
+                <h3><i class="fas fa-robot"></i> AI-Powered Destination Summary</h3>
+                <div id="aiSummaryContent" class="loading">
+                    <div class="spinner"></div>
+                    <p>Generating intelligent summary...</p>
+                </div>
+            </div>
+
+            <!-- Weather Card -->
+            <div class="card weather-card">
+                <h3><i class="fas fa-cloud-sun"></i> Current Weather</h3>
+                <div id="weatherContent" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading weather data...</p>
+                </div>
+            </div>
+
+            <!-- News Card -->
+            <div class="card news-card">
+                <h3><i class="fas fa-newspaper"></i> Recent News & Happenings</h3>
+                <div id="newsContent" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading news...</p>
+                </div>
+            </div>
+
+            <!-- Hotels Recommendations Card -->
+            <div class="card hotels-card">
+                <h3><i class="fas fa-hotel"></i> Recommended Hotels (Women Safety & Location)</h3>
+                <div id="hotelsContent" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading hotel recommendations...</p>
+                </div>
+            </div>
+
+            <!-- Food Recommendations Card -->
+            <div class="card food-card">
+                <h3><i class="fas fa-utensils"></i> Top Food Recommendations</h3>
+                <div id="foodContent" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading food recommendations...</p>
+                </div>
+            </div>
+
+            <!-- Travel Tips Card -->
+            <div class="card tips-card">
+                <h3><i class="fas fa-info-circle"></i> Travel Information</h3>
+                <div id="travelTips">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Check local weather conditions before traveling</li>
+                        <li><i class="fas fa-check"></i> Stay updated with recent news and events</li>
+                        <li><i class="fas fa-check"></i> Carry necessary documents and emergency contacts</li>
+                        <li><i class="fas fa-check"></i> Respect local customs and traditions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 India Travel Info. Helping travelers stay informed.</p>
+            <p class="api-credits">Weather data from OpenWeatherMap | News from NewsAPI</p>
+        </div>
+    </footer>
+
+    <script src="data/indian-cities.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
